@@ -19,5 +19,20 @@ namespace Mac.LearningApplication
         {
             // Insert code here to tear down your application
         }
+
+        public override NSApplicationTerminateReply ApplicationShouldTerminate(NSApplication sender)
+        {
+            return NSApplicationTerminateReply.Now;
+        }
+
+        public override bool ApplicationShouldHandleReopen(NSApplication sender, bool hasVisibleWindows)
+        {
+            return true;
+        }
+
+        public override bool ApplicationShouldTerminateAfterLastWindowClosed(NSApplication sender)
+        {
+            return true;
+        }
     }
 }

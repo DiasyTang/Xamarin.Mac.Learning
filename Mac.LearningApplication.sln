@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mac.LearningApplication", "Mac.LearningApplication\Mac.LearningApplication.csproj", "{E237F113-D9DA-4E9F-9AFE-D51A6397476C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.LearningApplication", "Test.LearningApplication\Test.LearningApplication.csproj", "{751C86BB-8EBA-48E0-97CA-B56D597AAE8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{E237F113-D9DA-4E9F-9AFE-D51A6397476C}.Debug|x86.Build.0 = Debug|x86
 		{E237F113-D9DA-4E9F-9AFE-D51A6397476C}.Release|x86.ActiveCfg = Release|x86
 		{E237F113-D9DA-4E9F-9AFE-D51A6397476C}.Release|x86.Build.0 = Release|x86
+		{751C86BB-8EBA-48E0-97CA-B56D597AAE8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{751C86BB-8EBA-48E0-97CA-B56D597AAE8C}.Debug|x86.Build.0 = Debug|Any CPU
+		{751C86BB-8EBA-48E0-97CA-B56D597AAE8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{751C86BB-8EBA-48E0-97CA-B56D597AAE8C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

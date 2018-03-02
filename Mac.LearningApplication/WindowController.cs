@@ -11,6 +11,7 @@ namespace Mac.LearningApplication
 	{
 		public WindowController (IntPtr handle) : base (handle)
 		{
+            
 		}
 	}
 }
