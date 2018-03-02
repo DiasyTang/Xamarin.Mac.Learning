@@ -81,10 +81,26 @@
     <Compile Include="WindowController.designer.cs">
       <DependentUpon>WindowController.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditorWindowDelegate.cs" />
+    <Compile Include="CustomDialogController.cs" />
+    <Compile Include="CustomDialogController.designer.cs">
+      <DependentUpon>CustomDialogController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheetViewController.cs" />
+    <Compile Include="SheetViewController.designer.cs">
+      <DependentUpon>SheetViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplaceViewSeque.cs" />
+    <Compile Include="AppPreferences.cs" />
+    <Compile Include="EditorPrefsController.cs" />
+    <Compile Include="EditorPrefsController.designer.cs">
+      <DependentUpon>EditorPrefsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Selected.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

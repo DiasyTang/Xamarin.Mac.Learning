@@ -9,11 +9,9 @@ using System.CodeDom.Compiler;
 
 namespace Mac.LearningApplication
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("EditorPrefsController")]
+	partial class EditorPrefsController
 	{
-		[Action ("ClickedButton:")]
-		partial void ClickedButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

@@ -6,6 +6,10 @@ namespace Mac.LearningApplication
     [Register("AppDelegate")]
     public class AppDelegate : NSApplicationDelegate
     {
+        #region Computed Properties
+        public AppPreferences Preferences { get; set; } = new AppPreferences();
+        #endregion
+
         public AppDelegate()
         {
         }
