@@ -15,8 +15,20 @@ namespace Mac.LearningApplication
         [Outlet]
         AppKit.NSTextField TestLabel { get; set; }
 
+        [Action ("AlertAddsAlertButton:")]
+        partial void AlertAddsAlertButton (Foundation.NSObject sender);
+
+        [Action ("AlertTitleClicked:")]
+        partial void AlertTitleClicked (Foundation.NSObject sender);
+
+        [Action ("CustomSubViewClicked:")]
+        partial void CustomSubViewClicked (Foundation.NSObject sender);
+
         [Action ("OpenPanelClicked:")]
         partial void OpenPanelClicked (Foundation.NSObject sender);
+
+        [Action ("SuppressAlertClicked:")]
+        partial void SuppressAlertClicked (Foundation.NSObject sender);
         
         void ReleaseDesignerOutlets ()
         {
