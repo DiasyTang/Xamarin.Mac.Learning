@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace Mac.LearningApplication
 {
-	[Register ("TextViewController")]
-	partial class TextViewController
+	[Register ("RightViewController")]
+	partial class RightViewController
 	{
 		
 		void ReleaseDesignerOutlets ()

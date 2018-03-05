@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Sourcelist\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -100,9 +101,21 @@
       <DependentUpon>PreferenceWindowController.cs</DependentUpon>
     </Compile>
     <Compile Include="PreferenceWindowDelegate.cs" />
-    <Compile Include="TextViewController.cs" />
-    <Compile Include="TextViewController.designer.cs">
-      <DependentUpon>TextViewController.cs</DependentUpon>
+    <Compile Include="Sourcelist\SourceListView.cs" />
+    <Compile Include="Sourcelist\SourceListDataSource.cs" />
+    <Compile Include="Sourcelist\SourceListItem.cs" />
+    <Compile Include="Sourcelist\SourceListDelegate.cs" />
+    <Compile Include="LeftViewController.cs" />
+    <Compile Include="LeftViewController.designer.cs">
+      <DependentUpon>LeftViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RightViewController.cs" />
+    <Compile Include="RightViewController.designer.cs">
+      <DependentUpon>RightViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplitViewController.cs" />
+    <Compile Include="SplitViewController.designer.cs">
+      <DependentUpon>SplitViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -34,16 +34,24 @@ namespace Mac.LearningApplication
             var source = SourceController as NSViewController;
             var destination = DestinationController as NSViewController;
 
-            if (source == null)
-            {
-                var window = NSApplication.SharedApplication.KeyWindow;
-                window.ContentViewController = destination;
-                window.ContentViewController?.RemoveFromParentViewController();
+            //if (source == null)
+            //{
+            //    var window = NSApplication.SharedApplication.KeyWindow;
+            //    window.ContentViewController = destination;
+            //    window.ContentViewController?.RemoveFromParentViewController();
+            //}
+            //else
+            //{
+            //    source.RemoveFromParentViewController();
+            //}
+
+            if(source.View.Subviews.Length>0){
+                source.View.Subviews[0].RemoveFromSuperview();
             }
-            else
-            {
-                source.RemoveFromParentViewController();
-            }
+
+            destination.View.Frame = new CoreGraphics.CGRect(0, 0, source.View.Frame.Width, source.View.Frame.Height);
+            destination.View.AutoresizingMask = NSViewResizingMask.HeightSizable | NSViewResizingMask.WidthSizable;
+            source.View.AddSubview(destination.View);
         }
         #endregion
     }
