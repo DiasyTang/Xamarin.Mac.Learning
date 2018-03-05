@@ -9,14 +9,21 @@ using System.CodeDom.Compiler;
 
 namespace Mac.LearningApplication
 {
-	[Register ("ViewController")]
-	partial class ViewController
-	{
-		[Action ("ClickedButton:")]
-		partial void ClickedButton (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-		}
-	}
+    [Register ("ViewController")]
+    partial class ViewController
+    {
+        [Outlet]
+        AppKit.NSTextField TestLabel { get; set; }
+
+        [Action ("OpenPanelClicked:")]
+        partial void OpenPanelClicked (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (TestLabel != null) {
+                TestLabel.Dispose ();
+                TestLabel = null;
+            }
+        }
+    }
 }

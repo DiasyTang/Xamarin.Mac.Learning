@@ -81,6 +81,7 @@ namespace Mac.LearningApplication
                 return String.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", (int)alpha, (int)red, (int)green, (int)blue);
             }
             else
+                
             {
                 return String.Format("#{0:X2}{1:X2}{2:X2}", (int)red, (int)green, (int)blue);
             }

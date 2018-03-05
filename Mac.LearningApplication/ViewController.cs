@@ -64,5 +64,26 @@ namespace Mac.LearningApplication
                     break;
             }
         }
+
+        partial void OpenPanelClicked(NSObject sender)
+        {
+            var dlg = NSOpenPanel.OpenPanel;
+            dlg.CanChooseFiles = true;
+            dlg.CanChooseDirectories = true;
+            dlg.AllowedFileTypes = new string[] { "txt", "html", "md", "css" };
+
+            if(dlg.RunModal()==1){
+                var url = dlg.Urls[0];
+
+                if(url!=null){
+                    var path = url.Path;
+                    TestLabel.StringValue = path;
+                }
+            }
+        }
+
+        public void  ConfigureEditor(){
+            TestLabel.TextColor = NSColor.Red;
+        }
     }
 }

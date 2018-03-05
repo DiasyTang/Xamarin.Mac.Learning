@@ -38,5 +38,14 @@ namespace Mac.LearningApplication
         {
             return true;
         }
+
+        public void UpdateWindowPreferences(){
+            for (int n = 0; n < NSApplication.SharedApplication.Windows.Length;++n){
+                var content = NSApplication.SharedApplication.Windows[n].ContentViewController;
+                if(content is ViewController){
+                    (content as ViewController).ConfigureEditor();
+                }
+            }
+        }
     }
 }

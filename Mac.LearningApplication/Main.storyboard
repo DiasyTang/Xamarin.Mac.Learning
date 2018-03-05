@@ -718,8 +718,31 @@
                                     <segue destination="mwi-AV-dqc" kind="sheet" identifier="SheetSegue" id="5Jq-gm-hdS"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-pQ-elQ">
+                                <rect key="frame" x="26" y="156" width="254" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Test" id="bWU-gX-AVQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njL-58-mhQ">
+                                <rect key="frame" x="230" y="222" width="100" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="OpenPanel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W73-zW-cf3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="OpenPanelClicked:" target="XfG-lQ-9wD" id="NNP-MZ-MNP"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="TestLabel" destination="yfY-pQ-elQ" id="PFg-dv-OrQ"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -795,7 +818,7 @@ Gw
         <!--Window Controller-->
         <scene sceneID="e27-tF-Sr3">
             <objects>
-                <windowController id="Qvq-R5-iME" sceneMemberID="viewController">
+                <windowController id="Qvq-R5-iME" customClass="PreferenceWindowController" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="LVm-j0-g94">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -808,12 +831,12 @@ Gw
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="euk-8w-HJs"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LF2-JS-kft"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="c14-l6-sNp"/>
-                                <toolbarItem implicitItemIdentifier="4970C78B-ED14-4762-8169-8D1189CEBD31" label="Profile" paletteLabel="Profile" tag="-1" image="Selected" id="UHd-5q-zcS">
+                                <toolbarItem implicitItemIdentifier="4970C78B-ED14-4762-8169-8D1189CEBD31" explicitItemIdentifier="Profile" label="Profile" paletteLabel="Profile" tag="-1" image="Selected" id="UHd-5q-zcS">
                                     <connections>
-                                        <segue destination="ujX-rG-1JM" kind="custom" customClass="ReplaceViewSeque" id="R4X-Ei-c7d"/>
+                                        <segue destination="ujX-rG-1JM" kind="custom" identifier="" customClass="ReplaceViewSeque" id="e8z-MZ-xzr"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="E61B86D1-1148-4E7D-ACF8-8B3CE21F3D10" label="Keypad" paletteLabel="Keypad" tag="-1" image="NSBonjour" id="fbF-qC-YBg">
+                                <toolbarItem implicitItemIdentifier="E61B86D1-1148-4E7D-ACF8-8B3CE21F3D10" explicitItemIdentifier="Keypad" label="Keypad" paletteLabel="Keypad" tag="-1" image="NSBonjour" id="fbF-qC-YBg">
                                     <connections>
                                         <segue destination="NZi-VW-xUa" kind="custom" customClass="ReplaceViewSeque" id="qm7-d1-tot"/>
                                     </connections>
@@ -829,6 +852,7 @@ Gw
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="Toolbar" destination="Wsd-lx-ZGg" id="yNX-Iy-APS"/>
                         <segue destination="ujX-rG-1JM" kind="relationship" relationship="window.shadowedContentViewController" id="Hfj-pL-1TQ"/>
                     </connections>
                 </windowController>
@@ -836,18 +860,18 @@ Gw
             </objects>
             <point key="canvasLocation" x="1224" y="242"/>
         </scene>
-        <!--View Controller-->
+        <!--Text View Controller-->
         <scene sceneID="RIF-dS-yRM">
             <objects>
-                <viewController id="ujX-rG-1JM" sceneMemberID="viewController">
+                <viewController id="ujX-rG-1JM" customClass="TextViewController" sceneMemberID="viewController">
                     <view key="view" id="k0j-eN-vFh">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zwj-LK-68a">
-                                <rect key="frame" x="18" y="126" width="437" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-Hs-pp1">
+                                <rect key="frame" x="73" y="126" width="300" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Profile" id="vz9-G9-6fK">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Profile" id="xaj-ld-tpj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -858,7 +882,7 @@ Gw
                 </viewController>
                 <customObject id="9tz-G7-Mg7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="696"/>
+            <point key="canvasLocation" x="1218" y="696"/>
         </scene>
         <!--Editor Prefs Controller-->
         <scene sceneID="l0D-nb-a2X">
@@ -951,11 +975,7 @@ Gw
                                     <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="NZi-VW-xUa" name="value" keyPath="self.Preferences.EditorBackgroundColor" id="zsa-Qz-gxb">
-                                        <dictionary key="options">
-                                            <bool key="NSConditionallySetsEnabled" value="YES"/>
-                                        </dictionary>
-                                    </binding>
+                                    <binding destination="NZi-VW-xUa" name="textColor" keyPath="self.Preferences.EditorBackgroundColor" id="9Uy-RZ-nKG"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -1061,6 +1081,6 @@ Gw
         <image name="Selected" width="23.25" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R4X-Ei-c7d"/>
+        <segue reference="e8z-MZ-xzr"/>
     </inferredMetricsTieBreakers>
 </document>

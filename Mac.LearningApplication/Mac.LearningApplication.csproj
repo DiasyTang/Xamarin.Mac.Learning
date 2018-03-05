@@ -95,6 +95,15 @@
     <Compile Include="EditorPrefsController.designer.cs">
       <DependentUpon>EditorPrefsController.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreferenceWindowController.cs" />
+    <Compile Include="PreferenceWindowController.designer.cs">
+      <DependentUpon>PreferenceWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreferenceWindowDelegate.cs" />
+    <Compile Include="TextViewController.cs" />
+    <Compile Include="TextViewController.designer.cs">
+      <DependentUpon>TextViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
